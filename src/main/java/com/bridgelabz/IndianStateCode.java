@@ -22,8 +22,8 @@ public class IndianStateCode {
             Iterable<IndianStateCodeCsv> codeCsvIterable = () -> codeCsvIterator;
             numOfEntries = (int) StreamSupport.stream(codeCsvIterable.spliterator(), false).count();
             return numOfEntries;
-        } catch (IOException e) {
-           throw new StateCodeException(e.getMessage(), StateCodeException.ExceptionType.STATE_FILE_PROBLEM);
+        } catch (IllegalStateException | IOException ex) {
+            throw new StateCodeException(ex.getMessage(), StateCodeException.ExceptionType.FILE_TYPE_NULL);
         }
     }
 }
