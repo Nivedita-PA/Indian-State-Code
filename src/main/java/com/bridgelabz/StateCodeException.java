@@ -3,7 +3,7 @@ package com.bridgelabz;
 public class StateCodeException extends Exception {
 
     enum ExceptionType {
-        STATE_FILE_PROBLEM, FILE_TYPE_NULL, FILE_TYPE_PROBLEM;
+        STATE_FILE_PROBLEM, FILE_TYPE_NULL, FILE_TYPE_PROBLEM, INCORRECT_DELIMITER;
     }
 
     ExceptionType type;
