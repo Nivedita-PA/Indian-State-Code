@@ -10,9 +10,10 @@ import java.nio.file.Paths;
 import java.util.Iterator;
 import java.util.stream.StreamSupport;
 
-public class IndianStateCode {
+public class IndianStateCode2 {
 
-    public int loadIndianStateCode(String FILE_PATH) throws StateCodeException {
+
+    public int loadIndianStateCode2(String FILE_PATH) throws StateCodeException {
         try {
             Reader reader = Files.newBufferedReader(Paths.get(FILE_PATH));
             CsvToBean<IndianStateCodeCsv> csvToBean = new CsvToBeanBuilder(reader).withType(IndianStateCode.class)
@@ -23,7 +24,7 @@ public class IndianStateCode {
             numOfEntries = (int) StreamSupport.stream(codeCsvIterable.spliterator(), false).count();
             return numOfEntries;
         } catch (IllegalStateException | IOException ex) {
-            throw new StateCodeException(ex.getMessage(), StateCodeException.ExceptionType.STATE_FILE_PROBLEM);
+            throw new StateCodeException(ex.getMessage(), StateCodeException.ExceptionType.FILE_TYPE_NULL);
         }
-    }
+}
 }

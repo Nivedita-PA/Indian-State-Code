@@ -9,9 +9,9 @@ public class IncorrectFilePath {
 
     @Test
     public void givenStateCode_CSV_File_Should_Return_Exception(){
-        IndianStateCode indianStateCode = new IndianStateCode();
+        IndianStateCode2 indianStateCode = new IndianStateCode2();
         try {
-            indianStateCode.loadIndianStateCode(WRONG_FILE_PATH_STATE_CODE);
+            indianStateCode.loadIndianStateCode2(WRONG_FILE_PATH_STATE_CODE);
         } catch (StateCodeException e) {
             Assert.assertSame(StateCodeException.ExceptionType.FILE_TYPE_NULL, e.type);
         }
