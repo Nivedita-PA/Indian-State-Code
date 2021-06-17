@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="com.bridgelabz.CorrectFileTest" tests="1" skipped="0" failures="0" errors="0" timestamp="2021-06-17T09:09:20" hostname="DELL" time="0.581">
+  <properties/>
+  <testcase name="givenState_Code_CSV_File_Should_Return_Correct_Recs" classname="com.bridgelabz.CorrectFileTest" time="0.581"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>
